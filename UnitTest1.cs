@@ -6,7 +6,7 @@ namespace EmployeeReportKata
         public void GetAdultEmployees()
         {
             //Arrange
-            Employee employee = new Employee();
+            Emp employee = new Emp();
             //Act
             var possibleSundayWorkers = employee.CheckAge();
             //Assert
@@ -26,6 +26,9 @@ namespace EmployeeReportKata
 
         public Employee() { }
 
+    }
+    public class Emp
+    {
         public List<Employee> employees = new List<Employee>()
     {
         new Employee ("max", 17),
@@ -36,8 +39,6 @@ namespace EmployeeReportKata
     };
 
         public int CheckAge() => employees.Where(Employee => Employee.Age >= 18).Count();
-
     }
-
 
 }
